@@ -8,7 +8,7 @@
     </div>
   </div>
 </div>
-<div class='menuontop'>
+<div id='ontop'>
   <ul ng-controller='ListBookCtrl'>
     <li ng-repeat='item in listBook'><a class='bookitem' href='#/booking/detail'>{{item}}</a></li>   
   </ul>
@@ -18,5 +18,8 @@ $(document).ready(function () {
 	var x = setTimeout(function() {
 	    $("#page_wrapper_btm").removeClass("makevisible");
 	},100)
+  var y = setTimeout(function() {
+      $("#ontop").addClass("menuontop");
+  },300)
 });
 </script>
