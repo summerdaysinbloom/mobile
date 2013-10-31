@@ -1,0 +1,49 @@
+<!doctype html>
+<html ng-app="testApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="../assets.css">
+    <!-- Javascript -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/lib/custom.js"></script>
+    <script src="bower_components/swipe/swipe.js"></script>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+<body>
+  <div ng-view>
+  <!-- Angular -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script type="text/javascript">
+      window.mySwipe = new Swipe(document.getElementById('slider'), {
+          startSlide: 1,
+          speed: 400,
+          auto: 3000,
+          continuous: true,
+          disableScroll: false,
+          stopPropagation: false,
+          callback: function(index, elem) {},
+          transitionEnd: function(index, elem) {}
+      });
+
+      $('.menuontop ul li a.sel_dest').click(function() {
+        $('#page_wrapper_btm').toggleClass('added');
+        $('body').toggleClass('noscroll');
+        var height = $(window).height();
+      })
+  </script>
+  <script type="text/javascript">sliding();</script>
+
+  <!-- Application -->
+  <script src="scripts/module.js"></script>
+  <script src="scripts/states.js"></script>
+</body>
+</html>

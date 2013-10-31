@@ -1,0 +1,120 @@
+<!doctype html>
+<html ng-app="byApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="../assets.css">
+    <!-- Javascript -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" src="scripts/lib/custom.js"></script>
+    <script src="bower_components/swipe/swipe.js"></script>
+    <!-- Icon -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+  <body ng-app="byApp">
+    <div id='page_wrapper_top' ng-controller='MainCtrl'>
+      <div>
+        <div class='section'>
+          <a ng-click="mainFirst = !mainFirst">Row1</a>
+        </div>
+        <div class='main_content' ng-show='mainFirst'>The first row content will be here</div>
+        <div class='section'>
+          <a ng-click="mainSecond = !mainSecond">Row2</a>
+        </div>
+        <div class='main_content' ng-show='mainSecond'>The Second row contents will be here</div>
+        <div class='section'>
+          <a ng-click="mainThird = !mainThird">Row3</a>
+        </div>
+        <div class='main_content' ng-show='mainThird'>The Third row contents will be here</div>
+      </div>
+      <!-- popup menu -->
+        <!-- destination -->
+        <div class='menuontop' ng-show='showDest' ng-controller='ListDestCtrl'>
+          <div>
+            <ul>              
+              <li><a class='close_menu' >Close</a></li>
+              <li><a class='sel_dest' href='#/destination' class='close_menu' >Bangkok</a></li>
+              <li><a class='sel_dest' href='#/destination' class='close_menu' >Bintan</a></li>
+              <li><a class='sel_dest' href='#/destination' class='close_menu' >Phuket</a></li>
+              <li><a class='sel_dest' href='#/destination' class='close_menu' >Sanya</a></li>
+              <li><a class='sel_dest' href='#/destination' class='close_menu' >Shanghai</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- booking -->
+        <div class='menuontop' ng-show='showBook'>
+          Booking information will be here
+        </div>
+      </div>
+      <!-- popup menu end -->
+    </div>
+  
+  <div id='page_wrapper_btm'>
+    <div id='nav-block'>
+      <div>
+        <a ng-class="{'active': showDest}" ng-click="showDest = !showDest">Destination</a>
+      </div>
+      <div>
+        <a ng-class="{'active': showBook}" ng-click='showBook = !showBook'>Book</a>
+      </div>
+    </div>
+    <p>a</p>
+    <section id='detail_page'>
+      <div id='slider' class='swipe'>
+        <div class='swipe-wrap'>
+          <div class='vtype'><img src='images/v_spa1.png'></div>
+          <div class='vtype'><img src='images/v_spa2.png'></div>
+          <div class='vtype'><img src='images/v_spa3.png'></div>
+          <div class='vtype'><img src='images/v_spa5.png'></div>
+          <div class='vtype'><img src='images/v_spa6.png'></div>
+        </div>
+      </div>
+      <div id='detail_contents'>
+          <h3>Package 1 </h3>
+          <p>ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod       tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis       nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   Duis     autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,   vel illum     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio   dignissim qui blandit     praesent luptatum zzril delenit augue duis dolore te feugait nulla   facilisi. Nam liber tempor cum     soluta nobis eleifend option congue nihil imperdiet doming   id quod mazim placerat facer possim     assum. Typi non habent claritatem insitam; est usus   legentis in iis qui facit eorum claritatem.     Investigationes demonstraverunt lectores legere   me lius quod ii legunt saepius. Claritas est     etiam processus dynamicus, qui sequitur   mutationem consuetudium lectorum. Mirum est notare quam     littera gothica, quam nunc putamus   parum claram, anteposuerit litterarum formas humanitatis per     seacula quarta decima et   quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,     fiant sollemnes in   futurum.</p>
+          <h3>Package 2 </h3>
+          <p>ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod       tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis       nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   Duis     autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,   vel illum     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio   dignissim qui blandit     praesent luptatum zzril delenit augue duis dolore te feugait nulla   facilisi. Nam liber tempor cum     soluta nobis eleifend option congue nihil imperdiet doming   id quod mazim placerat facer possim     assum. Typi non habent claritatem insitam; est usus   legentis in iis qui facit eorum claritatem.     Investigationes demonstraverunt lectores legere   me lius quod ii legunt saepius. Claritas est     etiam processus dynamicus, qui sequitur   mutationem consuetudium lectorum. Mirum est notare quam     littera gothica, quam nunc putamus   parum claram, anteposuerit litterarum formas humanitatis per     seacula quarta decima et   quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,     fiant sollemnes in   futurum.</p>
+          <h3>Package 3 </h3>
+          <p>ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod       tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis       nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.   Duis     autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat,   vel illum     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio   dignissim qui blandit     praesent luptatum zzril delenit augue duis dolore te feugait nulla   facilisi. Nam liber tempor cum     soluta nobis eleifend option congue nihil imperdiet doming   id quod mazim placerat facer possim     assum. Typi non habent claritatem insitam; est usus   legentis in iis qui facit eorum claritatem.     Investigationes demonstraverunt lectores legere   me lius quod ii legunt saepius. Claritas est     etiam processus dynamicus, qui sequitur   mutationem consuetudium lectorum. Mirum est notare quam     littera gothica, quam nunc putamus   parum claram, anteposuerit litterarum formas humanitatis per     seacula quarta decima et   quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,     fiant sollemnes in   futurum.</p>
+      </div>
+    </section>
+
+  </div>
+
+</div>
+
+  <!-- Angular -->
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script type="text/javascript">
+      window.mySwipe = new Swipe(document.getElementById('slider'), {
+          startSlide: 1,
+          speed: 400,
+          auto: 3000,
+          continuous: true,
+          disableScroll: false,
+          stopPropagation: false,
+          callback: function(index, elem) {},
+          transitionEnd: function(index, elem) {}
+      });
+
+      $('.menuontop ul li a.sel_dest').click(function() {
+        $('#page_wrapper_btm').toggleClass('added');
+        $('body').toggleClass('noscroll');
+        var height = $(window).height();
+      })
+  </script>
+  <script type="text/javascript">sliding();</script>
+
+  <!-- Application -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+</body>
+</html>

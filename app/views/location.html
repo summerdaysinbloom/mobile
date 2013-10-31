@@ -1,0 +1,83 @@
+<div id='location'>
+<div id='page_wrapper_top'>
+  <div>
+    <div class='section'>
+      <a ng-click="mainFirst = !mainFirst">Row1</a>
+    </div>
+    <div class='main_content' ng-show='mainFirst'>The first row content will be here</div>
+    <div class='section'>
+      <a ng-click="mainSecond = !mainSecond">Row2</a>
+    </div>
+    <div class='main_content' ng-show='mainSecond'>The Second row contents will be here</div>
+    <div class='section'>
+      <a ng-click="mainThird = !mainThird">Row3</a>
+    </div>
+    <div class='main_content' ng-show='mainThird'>The Third row contents will be here</div>
+  </div>
+</div>
+<div id='page_wrapper_btm'>
+  <div id='nav-block'>
+    <div>
+      <a href='#/destination'>Destination</a>
+    </div>
+    <div>
+      <a href='#/booking'>Book</a>
+    </div>
+  </div>
+  <div id='page-content'>
+    <div ng-controller='DestCtrl'>
+      <div id='slider' class='swipe'>
+        <div class='swipe-wrap'>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+          <div><img src='images/default.png'></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div id='inside-content'>
+      <p class="lead">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    <p class="lead">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p> 
+    <p class="lead">Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?"</p>
+    <p class="lead">"Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+    </div>
+  </dvv>
+</div>
+</div>
+<script>
+$(document).ready(function () {
+	var x = setTimeout(function() {
+	    $("#page_wrapper_btm").addClass("makevisible");
+	},200)
+});
+
+var offset = 1;
+
+$('#page-content').scroll(function(){
+    if ($('#page-content').scrollTop() > offset) {
+        $('#page-content').addClass('fixed');
+        // $('#detail_page').addClass('fixed');
+    } else {
+        $('#page-content').removeClass('fixed');
+        // $('#detail_page').removeClass('fixed');
+    }
+});    
+
+</script>
+<script type="text/javascript">
+    window.mySwipe = new Swipe(document.getElementById('slider'), {
+        startSlide: 1,
+        speed: 400,
+        auto: 3000,
+        continuous: true,
+        disableScroll: false,
+        stopPropagation: false,
+        callback: function(index, elem) {},
+        transitionEnd: function(index, elem) {}
+    });
+</script>

@@ -1,0 +1,38 @@
+<div id='page_wrapper_top'>
+  <div>
+    <div class='section'>
+      <a ng-click="mainFirst = !mainFirst">Row1</a>
+    </div>
+    <div class='main_content' ng-show='mainFirst'>The first row content will be here</div>
+    <div class='section'>
+      <a ng-click="mainSecond = !mainSecond">Row2</a>
+    </div>
+    <div class='main_content' ng-show='mainSecond'>The Second row contents will be here</div>
+    <div class='section'>
+      <a ng-click="mainThird = !mainThird">Row3</a>
+    </div>
+    <div class='main_content' ng-show='mainThird'>The Third row contents will be here</div>
+  </div>
+</div>
+
+<div class='menuontop' ng-show='showDest'>
+  <ul ng-controller='ListDestCtrl'>
+    <li ng-repeat='dest in listDest'><a  href='#/destination/{{dest}}'>{{dest}}</a></li>   
+  </ul>
+</div>
+<div class='menuontop' ng-show="showBook">
+  <ul ng-controller='ListBookCtrl'>
+    <li ng-repeat='item in listBook'><a href='#/booking/detail'>{{item}}</a></li>
+  </ul>
+</div>
+
+<div id='page_wrapper_btm'>
+  <div id='nav-block'>
+      <div>
+        <a ng-class="{'active': showDest}" ng-click="showDest = !showDest">Destination</a>
+      </div>
+      <div>
+        <a ng-class="{'active': showBook}" ng-click='showBook = !showBook'>Book</a>
+      </div>
+    </div>
+</div>

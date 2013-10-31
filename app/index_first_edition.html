@@ -1,0 +1,167 @@
+<!doctype html>
+<html ng-app="byApp">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/bootstrap.css">
+    <link rel="stylesheet" href="styles/slidingpage.css">
+    <link rel="stylesheet" href="styles/swipe.css"> <!--slideshow-->
+    <link rel="stylesheet" href="../assets.css">
+    <!-- javascript -->
+    <script src="bower_components/jquery/jquery.js"></script>
+    <script type="text/javascript" src="bower_components/jquery.scrollTo/jquery.scrollTo.js"></script>
+    <script type="text/javascript" src="scripts/lib/scroll.js"></script>
+    <script type="text/javascript" src="scripts/lib/jquery.mousewheel.js"></script>
+    <script type="text/javascript" src="scripts/lib/custom.js"></script>
+    <script src="bower_components/swipe/swipe.js"></script>
+    <link rel="shortcut icon" href="images/favicon.ico">
+</head>
+  <body ng-app="byApp">
+  <div id="wrapper">
+    <div id="mask" class="container" ng-controller='MainCtrl'>
+      <div id="item1" class="item">
+          <a name="item1"></a>
+          <div class="content main">
+            <img src='images/main2.png'>
+            <div class="container" id='main-container'>
+                <div>
+                    <p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+                </div>
+            
+            </div>
+            <div class='menuontop' ng-show='showDest' ng-controller='ListDestCtrl'>
+              <ul>              
+                  <li><a class='close_menu' ng-click="close('showDest')">Close</a></li>
+                  <li><a href='#item3' ng-click="close('showDest')" ui-sref='#/destination' class="panel panel-gallery" id="toSubmain">Bangkok</a></li>
+                  <li><a href='#item3' ng-click="close('showDest')" ui-sref='#/destination' class="panel panel-gallery" id="toSubmain">Bintan</a></li>
+                  <li><a href='#item3' ng-click="close('showDest')" ui-sref='#/destination' class="panel panel-gallery" id="toSubmain">Phuket</a></li>
+                  <li><a href='#item3' ng-click="close('showDest')" ui-sref='#/destination' class="panel panel-gallery" id="toSubmain">Samui</a></li>
+              </ul>
+            </div>
+            <div class='menuontop' ng-show='showBook'>
+              Booking information will be here
+              <a ng-click="close('showBook')">Close</a>
+            </div>
+            <div id='nav-block'>
+              <button ng-class="{'active': showDest}" ng-click="showDest = !showDest">Destination</button>
+              <button ng-class="{'active': showBook}" ng-click='showBook = !showBook'>Book</button>
+            </div>
+          </div>
+      </div>
+      <div id="item3" class="item subpage">
+        <a name="item3"></a>
+        <div class="container" id='sub-main-container'>
+          <div>
+            <a href=''><h1>section1</h1></a>
+              <div id='slider' class='swipe'>
+                <div class='swipe-wrap'>
+                  <div><img src='images/v_spa1.png'></div>
+                  <div><img src='images/v_spa2.png'></div>
+                  <div><img src='images/v_spa3.png'></div>
+                  <div><img src='images/v_spa5.png'></div>
+                  <div><img src='images/v_spa6.png'></div>
+                  <div><img src='images/v_spa7.png'></div>
+                  <div><img src='images/v_spa4.png'></div>
+                </div>
+            <div class='slide_nav'>
+              <a class='slide_prev' onclick='mySwipe.prev()'>prev</a> 
+              <a class='slide_next' onclick='mySwipe.next()'>next</a>
+           </div>
+
+            <div class='menutab_prev'><a href='#item1' class="panel" id="toMain">Go back</a></div>  
+            <div class='menutab_next'><a class="panel" id="detail">Details</a></div>
+          </div>
+          <div class='detail'>
+            <h3>Detail</h3>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod     tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis     nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis     autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit     praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum     soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim     assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.     Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est     etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam     littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per     seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,     fiant sollemnes in futurum.</p>
+
+            <h3>Package</h3>
+            <p>ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod     tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis     nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis     autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum     dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit     praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum     soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim     assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem.     Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est     etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam     littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per     seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari,     fiant sollemnes in futurum.</p>
+          </div>
+          <script type="text/javascript">
+          window.mySwipe = new Swipe(document.getElementById('slider'), {
+              startSlide: 1,
+              speed: 400,
+              auto: 3000,
+              continuous: true,
+              disableScroll: false,
+              stopPropagation: false,
+              callback: function(index, elem) {},
+              transitionEnd: function(index, elem) {}
+          });
+
+          $('#detail').click(function() {
+            console.log('clicked')
+            $('#slider img').css('width', '100%');
+            $('#slider img').css('height', 'auto');
+          });
+          </script>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div id="item4" class="item">
+      <a name="item4" id="mainpage"></a>
+      <div class="content main">
+        <article>
+        <h1>55555555</h1>
+        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius. Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
+        </article>
+    </div>
+  </div>
+
+<!-- 
+    <div class="container" id='main-container'>
+      Main view
+    </div>
+    <div class='menuontop' ng-show='showDest' ng-controller='ListDestCtrl'> Destination
+      <ul>
+        <li ng-repeat='dest in listDest'>
+          <a href='#/destination/:name'>{{dest}}</a>
+        </li>
+      </ul>
+    </div>
+    <div class='menuontop' ng-show='showText'>
+      Booking information will be here
+    </div>
+    <div id='nav-block'>
+      <button ng-click='showDest = !showDest'>Destination</button>
+      <button ng-click='showText = !showText'>Book</button>
+    </div>
+    <div class="container" ng-view="" id='sub-main-container'>
+      
+    </div> -->
+
+    <!-- Application -->
+    <script src="bower_components/angular/angular.js"></script>
+
+    <script src="bower_components/bootstrap-sass/js/bootstrap-affix.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-alert.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-dropdown.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tooltip.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-modal.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-transition.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-button.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-popover.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-typeahead.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-carousel.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-scrollspy.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-collapse.js"></script>
+    <script src="bower_components/bootstrap-sass/js/bootstrap-tab.js"></script>
+
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+
+
+    <script type="text/javascript">sliding();</script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+</body>
+</html>

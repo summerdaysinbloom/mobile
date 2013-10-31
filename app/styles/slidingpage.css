@@ -1,0 +1,49 @@
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: auto; 
+}
+
+a,
+a:hover,
+a:link,
+a:active,
+a:visited {
+  text-decoration: none; }
+
+ul,
+li {
+  list-style: none; }
+
+h1,
+h2 {
+  text-indent: -999em;
+  display: none; }
+
+h3 {
+  margin: 0; }
+
+/* scroll setting */
+#wrapper {
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%; 
+}
+
+
+#mask {
+  height: 300%;
+  width: 100%; 
+}
+
+
+.item {
+  float: left;
+  height: 33.3333%;
+  width: 100%;
+  overflow-y: scroll;
+}

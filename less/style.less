@@ -1,0 +1,258 @@
+* { 
+  margin:0; 
+  padding:0; 
+}
+
+a img { 
+  border:none; 
+}
+
+p { 
+  padding: 10px; 
+}
+
+body {
+  height: 100%;
+  overflow-y: scroll;
+  &.noscroll {
+    overflow-y: hidden;
+  }
+}
+
+ul,
+li {
+  list-style: none;
+  margin-bottom: 0;
+  padding: 0;
+}
+
+/* layout */
+#page_wrapper_top {
+  height: 100%;
+  -webkit-transition: top 3s linear;
+  -moz-transition: top 3s linear;
+  transition: top 3s linear;
+  overflow-x: hidden;
+  > div {
+    height: 100%;
+    .section {
+      border-bottom: 1px solid #eee;
+      height: 250px;
+      width: 100%;
+      a {
+        display: block;
+        height: 250px;
+        text-align: center;
+        text-decoration: none;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .main_content {
+      border-bottom: 1px solid #eee;
+      display: block;
+      height: 100px;
+      overflow: hidden;
+      padding: 30px;
+      width: 100%;
+      img {
+        display: block;
+        margin-bottom: 3px;
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+#page_wrapper_btm.makevisible {
+    top: 0;
+  position: fixed;
+  transition: top 0.5s;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+}
+
+
+#page_wrapper_btm {
+  width: 100%;
+  top: 95%;
+  position: fixed;
+  height: 100%;
+  background: #fff;
+  left: 0;
+  transition: top 0.5s;
+  -webkit-transition: top 0.5s;
+  -moz-transition: top 0.5s;
+  #nav-block {
+    border-top: 1px solid #ccc;
+    position: absolute;
+    top: 0;
+    div:first-child {
+      border-right: 1px solid #ccc;
+    }
+  }
+}
+
+#nav-block {
+  z-index: 100;
+  background: #fff;
+  position: relative;
+  border-bottom: 1px solid #fff;
+  height: 50px;
+  width: 100%;
+  float: left;
+  bottom: 0;
+  display:-moz-box; 
+  display:-webkit-box;
+  display:-ms-flexbox;
+  display:box;
+  > div {
+    -moz-box-flex:1.0; 
+    -webkit-box-flex:1.0; 
+    -ms-flex:1.0; 
+    box-flex:1.0;
+    text-align: center;
+    line-height: 320%;
+    a {
+      color: #9E8E76;
+      font-size: 1.0em;
+      display: block;
+      text-decoration: none;
+    }
+  }
+}
+
+#page_wrapper_btm.added {
+  background-color:#000; 
+  position: fixed;
+  top: 0;
+}
+
+.menuontop {
+  background: rgba(0,0,0,.5);
+  bottom: 32px;
+  color: #fff;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  > div {
+    margin: 20px;
+  }
+  ul {
+    margin: 0;
+    width: 100%;
+    li {
+      background: rgba(225,225,225,0.1);
+      margin-bottom: 7px;
+      padding: 7px;
+      a {
+        color: #fff;
+        display: block;
+        text-decoration: none;
+        &.close_menu {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+#detail_page {
+  background: #000;
+  color: #fff;
+  height: 100%;
+  overflow-y: scroll;
+  position:relative;
+  width: 100%;
+  padding-bottom: 40px;
+}
+
+#detail_contents {
+  margin-top: 100px;
+  color: #fff;
+  padding: 0 20px 100px 20px;
+}
+
+.hide {
+  visibility: hidden;
+}
+
+/* slide show */
+.swipe {
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  visibility: hidden;
+}
+.swipe-wrap {
+  overflow: hidden;
+  overflow-y: scroll;
+  position: relative;
+  height: 100%;
+}
+.swipe-wrap > div {
+  margin: 0 auto;
+  float:left;
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: auto;
+  z-index: 10;
+}
+
+#slider {
+  position: relative;
+  .swipe-wrap > div {
+    overflow: hidden;
+    height: 100%;
+    img {
+      width: auto;
+      height: 100%;
+    }
+    
+  }
+}
+
+#page-content.fixed {
+  #slider {
+  height: 100%;
+  left: 0;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+  right: 0;
+  width: 100%;
+  .swipe-wrap {
+  }
+  .swipe-wrap > div {
+
+  border-bottom: 2px solid #000;
+    width: 100%;
+      img {
+        height: 50%;
+        width: 100%;
+        /*height: 200px;*/
+      }
+  }
+}
+#inside-content {
+  overflow-y: scroll;
+  }
+}
+
+
+#page-content {
+  height: 100%;
+  margin-top: 50px;
+  overflow-y: scroll;
+}
+
+#inside-content {
+  color: #fff;
+  position: absolute;
+  top: 60%;
+  height: 50%;
+}
