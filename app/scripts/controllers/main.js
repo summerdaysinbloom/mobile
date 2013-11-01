@@ -1,7 +1,8 @@
 'use strict';
 
-angular.module('byApp')
+angular.module('testApp')
   .controller('MainCtrl', function ($scope) {
+    console.log('mainCtrl');
     $scope.destination = [
         'Bangkok',
         'Bintan',
@@ -34,7 +35,10 @@ angular.module('byApp')
 
   })
   .controller('ListDestCtrl', function($scope) {
-  	$scope.listDest = ['Bangkok','Bintan','Macau','Phuket','Sanya'];
+    $scope.listDest = ['Bangkok','Bintan','Macau','Phuket','Sanya'];
+  })
+  .controller('ListBookCtrl', function($scope) {
+    $scope.listBook = ['Booking','Date','Hotel','Package'];
   })
   .controller('DestCtrl', function($scope) {
   })

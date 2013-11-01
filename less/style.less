@@ -28,7 +28,6 @@ li {
 
 /* layout */
 #page_wrapper_top {
-  height: 100%;
   -webkit-transition: top 3s linear;
   -moz-transition: top 3s linear;
   transition: top 3s linear;
@@ -67,6 +66,7 @@ li {
 
 
 #page_wrapper_btm.makevisible {
+  overflow-y: scroll;
   top: 0;
   position: fixed;
   transition: top 0.5s;
@@ -193,6 +193,7 @@ li {
   overflow: hidden;
   overflow-y: scroll;
   position: relative;
+  height: 500px;
 }
 .swipe-wrap > div {
   margin: 0 auto;
@@ -217,12 +218,11 @@ li {
 
 #page-content {
   margin-top: 50px;
-  overflow-y: scroll;
 }
 
 #inside-content {
-  color: #fff;
-  position: absolute;
-  top: 60%;
-  height: 50%;
+color: #fff;
+position: absolute;
+display: block;
+background: #000;
 }
